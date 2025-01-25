@@ -8,9 +8,9 @@ function addScore(combatant, points) {
     redScore += points;
     if (points === 1) {
       redScores.percussion++;
-    } else if (points === 2) {
+    } else if (points === 1) {
       redScores.projection++;
-    } else if (points === 3 || points === 4 || points === 5 || points === 6) {
+    } else if (points === 1 || points === 2 || points === 3 || points === 4) {
       redScores.sol++;
     }
     updateStats('red');
@@ -18,9 +18,9 @@ function addScore(combatant, points) {
     blueScore += points;
     if (points === 1) {
       blueScores.percussion++;
-    } else if (points === 2) {
+    } else if (points === 1) {
       blueScores.projection++;
-    } else if (points === 3 || points === 4 || points === 5 || points === 6) {
+    } else if (points === 1 || points === 2 || points === 3 || points === 4) {
       blueScores.sol++;
     }
     updateStats('blue');
