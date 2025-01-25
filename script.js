@@ -29,10 +29,12 @@ function addScore(combatant, points) {
 
 function addWarning(combatant) {
   if (combatant === 'red') {
-    redScores.warning++;
+    redScore -= 2;  // Retirer 2 points du score total
+    redScores.warning++;  // Incrémenter le nombre d'avertissements
     updateStats('red');
   } else if (combatant === 'blue') {
-    blueScores.warning++;
+    blueScore -= 2;  // Retirer 2 points du score total
+    blueScores.warning++;  // Incrémenter le nombre d'avertissements
     updateStats('blue');
   }
 }
