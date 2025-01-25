@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoring App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Scoring des Combats</h1>
+    
+    <div class="scores">
+      <!-- Combatant Rouge -->
+      <div class="combatant" style="background-color: #ffcccc;">
+        <h2>Rouge</h2>
+        <p id="score-red">Score : 0</p>
+        <button class="rectangular red-light-button" onclick="addScore('red', 1)">Percussion</button>
+        <button class="rectangular red-light-button" onclick="addScore('red', 2)">Projection</button>
+
+        <div class="sol-buttons">
+          <button class="square red-light-button" onclick="addScore('red', 3)">Contrôle</button>
+          <button class="square red-light-button" onclick="addScore('red', 4)">renvT</button>
+          <button class="square red-light-button" onclick="addScore('red', 5)">Passage de garde</button>
+          <button class="square red-light-button" onclick="addScore('red', 6)">Montée</button>
+        </div>
+
+        <button class="rectangular yellow-orange-button" onclick="addWarning('red')">Avertissement</button>
+
+        <table id="red-stats" class="stats-table">
+          <tr>
+            <td>Percussion</td>
+            <td id="red-percussion-count">0</td>
+            <td id="red-percussion-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Projection</td>
+            <td id="red-projection-count">0</td>
+            <td id="red-projection-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Sol</td>
+            <td id="red-sol-count">0</td>
+            <td id="red-sol-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Avertissement</td>
+            <td id="red-warning-count">0</td>
+            <td id="red-warning-percent">0%</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Combatant Bleu -->
+      <div class="combatant" style="background-color: #cce0ff;">
+        <h2>Bleu</h2>
+        <p id="score-blue">Score : 0</p>
+        <button class="rectangular blue-light-button" onclick="addScore('blue', 1)">Percussion</button>
+        <button class="rectangular blue-light-button" onclick="addScore('blue', 2)">Projection</button>
+
+        <div class="sol-buttons">
+          <button class="square blue-light-button" onclick="addScore('blue', 3)">Contrôle</button>
+          <button class="square blue-light-button" onclick="addScore('blue', 4)">renvT</button>
+          <button class="square blue-light-button" onclick="addScore('blue', 5)">Passage de garde</button>
+          <button class="square blue-light-button" onclick="addScore('blue', 6)">Montée</button>
+        </div>
+
+        <button class="rectangular yellow-orange-button" onclick="addWarning('blue')">Avertissement</button>
+
+        <table id="blue-stats" class="stats-table">
+          <tr>
+            <td>Percussion</td>
+            <td id="blue-percussion-count">0</td>
+            <td id="blue-percussion-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Projection</td>
+            <td id="blue-projection-count">0</td>
+            <td id="blue-projection-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Sol</td>
+            <td id="blue-sol-count">0</td>
+            <td id="blue-sol-percent">0%</td>
+          </tr>
+          <tr>
+            <td>Avertissement</td>
+            <td id="blue-warning-count">0</td>
+            <td id="blue-warning-percent">0%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <button onclick="calculateWinner()">Calculer Vainqueur</button>
+    <p id="winner">Vainqueur : </p>
+    <button onclick="resetScores()">Réinitialiser</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

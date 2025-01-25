@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#app {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Colonne pour organiser les éléments */
+  align-items: center;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.combatant {
+  display: inline-block;
+  width: 45%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+}
+
+.combatant h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.rectangular {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sol-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.square {
+  width: 22%;
+  margin: 0 2%;
+}
+
+.stats-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.stats-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#red-stats, #blue-stats {
+  margin-top: 20px;
+  width: 45%; /* Chaque tableau prendra 45% de la largeur */
+}
+
+#red-stats td, #blue-stats td {
+  color: white;
+  font-weight: bold;
+}
+
+#red-stats td {
+  background-color: #ff6666; /* Rouge clair */
+}
+
+#blue-stats td {
+  background-color: #66b3ff; /* Bleu clair */
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.yellow-orange-button {
+  background-color: #FFA500; /* Jaune orangé */
+  color: white;
+}
+
+.yellow-orange-button:hover {
+  background-color: #FF8C00; /* Couleur légèrement plus foncée au survol */
+}
+
+.red-light-button {
+  background-color: #ff7f7f; /* Rouge plus clair pour le combattant rouge */
+  color: white;
+}
+
+.red-light-button:hover {
+  background-color: #ff4d4d; /* Rouge un peu plus foncé au survol */
+}
+
+.blue-light-button {
+  background-color: #a3c6ff; /* Bleu plus clair pour le combattant bleu */
+  color: white;
+}
+
+.blue-light-button:hover {
+  background-color: #66a3ff; /* Bleu un peu plus foncé au survol */
+}
