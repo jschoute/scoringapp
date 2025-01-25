@@ -1,1 +1,1 @@
-# ScoringApp
+# scoringapp
