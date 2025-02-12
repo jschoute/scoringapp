@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Score Multiobs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>BILAN SCORE </h1>
+
+  <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+    <tr>
+      <th>COIN ROUGE</th>
+      <th>COIN BLEU</th>
+    </tr>
+    <tr>
+      <td>NOM DU COMBATTANT : <br> ……………………………………</td>
+      <td>NOM DU COMBATTANT : <br> ……………………………………</td>
+    </tr>
+    <tr>
+      <td>NOMBRE DE TOUCHES CUMULÉS : <br> ……………………………………</td>
+      <td>NOMBRE DE TOUCHES CUMULÉS : <br> ……………………………………</td>
+    </tr>
+    <tr>
+      <td>NOMBRE DE PROJECTIONS CUMULÉS : <br> ……………………………………</td>
+      <td>NOMBRE DE PROJECTIONS CUMULÉS : <br> ……………………………………</td>
+    </tr>
+    <tr>
+      <td>NOMBRE DE POINTS TECHNIQUES CUMULÉS : <br> ……………………………………</td>
+      <td>NOMBRE DE POINTS TECHNIQUES CUMULÉS : <br> ……………………………………</td>
+    </tr>
+    <tr>
+      <td>NOTE (VOIR BARÈME) : <br> ……………………………………</td>
+      <td>NOTE (VOIR BARÈME) : <br> ……………………………………</td>
+    </tr>
+  </table>
+
+  <h2>BARÈME</h2>
+  <ul>
+    <li>Égalité entre les deux combattants : <strong>10 - 10</strong></li>
+    <li>Domination légère (1 à 5 points d'écart) : <strong>10 - 9</strong></li>
+    <li>Domination importante (5 à 10 points d'écart) : <strong>10 - 8</strong></li>
+    <li>Domination à la limite du surclassement (+ de 10 points techniques d'écart) : <strong>10 - 7</strong></li>
+  </ul>
+
+  <button onclick="goBack()">Retour</button>
+  <script>
+    function goBack() {
+      window.history.back(); // Retourne à la page précédente
+    }
+  </script>
+</body>
+</html>

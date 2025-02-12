@@ -1,3 +1,4 @@
+/* Styles globaux pour le body et l'application */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -39,6 +40,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Boutons généraux */
 button {
   display: block;
   width: 100%;
@@ -46,17 +48,42 @@ button {
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
 }
 
 button:hover {
   background-color: #ddd;
 }
 
-.rectangular {
-  width: 100%;
-  margin-bottom: 10px;
+/* Boutons Rouge */
+.red-button {
+  background-color: #ff9999; /* Rouge plus pâle */
+  color: white;
 }
 
+.yellow-button {
+  background-color: #ffcc00; /* Jaune orangé pour avertissement */
+  color: black;
+}
+
+.undo-button.red-button {
+  background-color: #ff9999; /* Rouge pâle pour Annuler le dernier point */
+  color: white;
+}
+
+/* Boutons Bleu */
+.blue-button {
+  background-color: #99ccff; /* Bleu plus pâle */
+  color: white;
+}
+
+.undo-button.blue-button {
+  background-color: #99ccff; /* Bleu pâle pour Annuler le dernier point */
+  color: white;
+}
+
+/* Boutons spécifiques au sol */
 .sol-buttons {
   display: flex;
   justify-content: space-between;
@@ -68,6 +95,7 @@ button:hover {
   margin: 0 2%;
 }
 
+/* Tableau des statistiques */
 .stats-table {
   width: 100%;
   margin-top: 20px;
@@ -80,54 +108,12 @@ button:hover {
   text-align: center;
 }
 
-#red-stats, #blue-stats {
-  margin-top: 20px;
-  width: 45%; /* Chaque tableau prendra 45% de la largeur */
-}
-
-#red-stats td, #blue-stats td {
-  color: white;
-  font-weight: bold;
-}
-
 #red-stats td {
-  background-color: #ff6666; /* Rouge clair */
+  background-color: #ffcccc; /* Rouge clair (fond du tableau Rouge) */
+  color: white;
 }
 
 #blue-stats td {
-  background-color: #66b3ff; /* Bleu clair */
-}
-
-#buttons-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.yellow-orange-button {
-  background-color: #FFA500; /* Jaune orangé */
+  background-color: #cce0ff; /* Bleu clair (fond du tableau Bleu) */
   color: white;
-}
-
-.yellow-orange-button:hover {
-  background-color: #FF8C00; /* Couleur légèrement plus foncée au survol */
-}
-
-.red-light-button {
-  background-color: #ff7f7f; /* Rouge plus clair pour le combattant rouge */
-  color: white;
-}
-
-.red-light-button:hover {
-  background-color: #ff4d4d; /* Rouge un peu plus foncé au survol */
-}
-
-.blue-light-button {
-  background-color: #a3c6ff; /* Bleu plus clair pour le combattant bleu */
-  color: white;
-}
-
-.blue-light-button:hover {
-  background-color: #66a3ff; /* Bleu un peu plus foncé au survol */
 }
