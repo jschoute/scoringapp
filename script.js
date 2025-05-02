@@ -68,18 +68,48 @@ function undoLastPoint(combatant) {
 
 // Fonction pour mettre à jour les statistiques
 function updateStats(combatant) {
+  let totalActions;
+  let percCount, projCount, solCount, warnCount;
+
   if (combatant === 'red') {
+    totalActions = redScores.percussion + redScores.projection + redScores.sol + redScores.warning;
+    percCount = redScores.percussion;
+    projCount = redScores.projection;
+    solCount = redScores.sol;
+    warnCount = redScores.warning;
+
+    // Mettre à jour les éléments HTML avec les valeurs
     document.getElementById('score-red').textContent = `Score : ${redScore}`;
-    document.getElementById('red-percussion-count').textContent = redScores.percussion;
-    document.getElementById('red-projection-count').textContent = redScores.projection;
-    document.getElementById('red-sol-count').textContent = redScores.sol;
-    document.getElementById('red-warning-count').textContent = redScores.warning;
+    document.getElementById('red-percussion-count').textContent = percCount;
+    document.getElementById('red-projection-count').textContent = projCount;
+    document.getElementById('red-sol-count').textContent = solCount;
+    document.getElementById('red-warning-count').textContent = warnCount;
+
+    // Calculer les pourcentages
+    document.getElementById('red-percussion-percent').textContent = totalActions > 0 ? ((percCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('red-projection-percent').textContent = totalActions > 0 ? ((projCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('red-sol-percent').textContent = totalActions > 0 ? ((solCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('red-warning-percent').textContent = totalActions > 0 ? ((warnCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    
   } else if (combatant === 'blue') {
+    totalActions = blueScores.percussion + blueScores.projection + blueScores.sol + blueScores.warning;
+    percCount = blueScores.percussion;
+    projCount = blueScores.projection;
+    solCount = blueScores.sol;
+    warnCount = blueScores.warning;
+
+    // Mettre à jour les éléments HTML avec les valeurs
     document.getElementById('score-blue').textContent = `Score : ${blueScore}`;
-    document.getElementById('blue-percussion-count').textContent = blueScores.percussion;
-    document.getElementById('blue-projection-count').textContent = blueScores.projection;
-    document.getElementById('blue-sol-count').textContent = blueScores.sol;
-    document.getElementById('blue-warning-count').textContent = blueScores.warning;
+    document.getElementById('blue-percussion-count').textContent = percCount;
+    document.getElementById('blue-projection-count').textContent = projCount;
+    document.getElementById('blue-sol-count').textContent = solCount;
+    document.getElementById('blue-warning-count').textContent = warnCount;
+
+    // Calculer les pourcentages
+    document.getElementById('blue-percussion-percent').textContent = totalActions > 0 ? ((percCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('blue-projection-percent').textContent = totalActions > 0 ? ((projCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('blue-sol-percent').textContent = totalActions > 0 ? ((solCount / totalActions) * 100).toFixed(1) + "%" : "0%";
+    document.getElementById('blue-warning-percent').textContent = totalActions > 0 ? ((warnCount / totalActions) * 100).toFixed(1) + "%" : "0%";
   }
 }
 
